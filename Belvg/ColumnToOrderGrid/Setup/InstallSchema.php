@@ -68,7 +68,7 @@ class InstallSchema implements InstallSchemaInterface
                 'count',
                 \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
                 null,
-                ['default'=>0,'nullable' => false],
+                ['default' => 0, 'nullable' => false],
                 'Count of request to bridge'
             );
         $installer->getConnection()->createTable($table_order_queue);

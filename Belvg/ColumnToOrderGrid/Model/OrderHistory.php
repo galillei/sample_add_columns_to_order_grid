@@ -26,20 +26,16 @@ class OrderHistory extends \Magento\Framework\Model\AbstractModel
 
     public function getGridColumn($id)
     {
-        if($id % 2 === 0){
+        if ($id % 2 === 0) {
 
-            return '<p style="background:rgba(255, 6, 26, 0.2);text-align: center;border:2px solid #800501;">' .$id.'</p>';
-        }else{
-            return '<p style="background:rgba(20, 255, 92, 0.2);text-align: center;border:2px solid green;">' .$id.'</p>';
+            return '<p style="background:rgba(255, 6, 26, 0.2);text-align: center;border:2px solid #800501;">' . $id . '</p>';
+        } else {
+            return '<p style="background:rgba(20, 255, 92, 0.2);text-align: center;border:2px solid green;">' . $id . '</p>';
 
         }
 
-        return '<p style="background:rgba(9, 138, 255, 0.2);text-align: center;border:2px solid #040880;">' .$id.'</p>';
+        return '<p style="background:rgba(9, 138, 255, 0.2);text-align: center;border:2px solid #040880;">' . $id . '</p>';
     }
-
-
-
-
 
 
 }

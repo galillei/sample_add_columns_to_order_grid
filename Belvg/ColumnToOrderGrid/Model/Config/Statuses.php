@@ -13,8 +13,9 @@ use Belvg\ColumnToOrderGrid\Model\OrderHistory;
 class Statuses implements \Magento\Framework\Data\OptionSourceInterface
 {
 
-    public static  $table = 'sales_order_grid';
+    public static $table = 'sales_order_grid';
     public static $leftJoinTable = 'rics_order_queue';
+
     /**
      * {@inheritdoc}
      */
@@ -24,14 +25,14 @@ class Statuses implements \Magento\Framework\Data\OptionSourceInterface
         $options[] = [
             'label' => __('In Queue'),
             'value' => OrderHistory::TYPE_IN_RABBITMQ
-            
+
         ];
         $options[] = [
             'label' => __('Error'),
             'value' => OrderHistory::ERROR
 
         ];
-        
+
         $options[] = [
             'label' => __('In bridge'),
             'value' => OrderHistory::TYPE_IN_BRIDGE
@@ -55,6 +56,6 @@ class Statuses implements \Magento\Framework\Data\OptionSourceInterface
         ];
         return $options;
     }
-    
+
 
 }
