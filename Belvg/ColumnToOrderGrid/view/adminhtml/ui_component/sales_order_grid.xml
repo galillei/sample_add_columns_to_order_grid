@@ -1,43 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-/**
- * Copyright © 2016 Magento. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <columns name="sales_order_columns">
-        <column name="rics_status" class="\Belvg\ColumnToOrderGrid\Ui\Component\Columns\OrderGrid">
-            <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">Belvg\ColumnToOrderGrid\Model\Config\Statuses</item>
-                <item name="config" xsi:type="array">
-                    <!--<item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>-->
-                    <item name="label" xsi:type="string" translate="true">Status in RICS</item>
-                    <item name="dataType" xsi:type="string">text</item>
-                    <item name="visible" xsi:type="boolean">true</item>
-                    <item name="bodyTmpl" xsi:type="string">ui/grid/cells/html</item>
-                </item>
-            </argument>
+        <column name="rics_status" class="Belvg\ColumnToOrderGrid\Ui\Component\Columns\OrderGrid">
+            <settings>
+                <filter>select</filter>
+                <options class="Belvg\ColumnToOrderGrid\Model\Config\Statuses"/>
+                <visible>true</visible>
+                <dataType>select</dataType>
+                <label translate="true">Example column</label>
+                <bodyTmpl>ui/grid/cells/html</bodyTmpl>
+                <sortable>false</sortable>
+            </settings>
         </column>
     </columns>
-    <!--<listingToolbar name="listing_top">-->
-    <!--<filters name="listing_filters">-->
-    <!--<filterSelect name="rics_status">-->
-    <!--<argument name="optionsProvider" xsi:type="configurableObject">-->
-    <!--<argument name="class" xsi:type="string">Belvg\ColumnToOrderGrid\Model\Config\Statuses</argument>-->
-    <!--</argument>-->
-    <!--<argument name="data" xsi:type="array">-->
-    <!--<item name="config" xsi:type="array">-->
-    <!--<item name="provider" xsi:type="string">${ $.parentName }</item>-->
-    <!--<item name="dataScope" xsi:type="string">rics_status</item>-->
-    <!--<item name="caption" xsi:type="string" translate="true">Select rics status</item>-->
-    <!--<item name="label" xsi:type="string" translate="true">Select rics status</item>-->
-    <!--<item name="component" xsi:type="string">Magento_Ui/js/form/element/ui-select</item>-->
-    <!--<item name="template" xsi:type="string">ui/grid/filters/elements/ui-select</item>-->
-    <!--</item>F-->
-    <!--</argument>-->
-    <!--</filterSelect>-->
-    <!--</filters>-->
-    <!--</listingToolbar>-->
 </listing>
